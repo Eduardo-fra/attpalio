@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Cadastro de Pessoas</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Sistema de Cadastro</h1>
+
+    <!-- Formulário Pessoa -->
+    <section class="card">
+      <h2>Cadastrar Pessoa</h2>
+      <form action="controllerPessoa.php?acao=salvar" method="post">
+        <label>
+          CPF
+          <input type="text" name="cpf" placeholder="000.000.000-00" required>
+        </label>
+
+        <label>
+          Nome
+          <input type="text" name="nome" placeholder="Nome completo" required>
+        </label>
+
+        <label>
+          Contato
+          <input type="text" name="contato" placeholder="(99) 99999-9999">
+        </label>
+
+        <label>
+          Senha
+          <input type="password" name="senha" placeholder="Senha" required>
+        </label>
+
+        <button type="submit" class="btn">Salvar Pessoa</button>
+      </form>
+    </section>
+
+    <!-- Formulário Informações -->
+    <section class="card">
+      <h2>Adicionar Informação</h2>
+      <form action="controllerPessoa.php?acao=salvarInfo" method="post">
+        <label>
+          CPF (da pessoa)
+          <input type="text" name="cpf" placeholder="000.000.000-00" required>
+        </label>
+
+        <label>
+          Data
+          <input type="date" name="data" required>
+        </label>
+
+        <label>
+          Descrição
+          <textarea name="descricao" rows="3" placeholder="Escreva a informação..." required></textarea>
+        </label>
+
+        <button type="submit" class="btn">Salvar Informação</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
+
+
